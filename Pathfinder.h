@@ -74,6 +74,7 @@ namespace finder
 		}
 	};
 
+	using namespace sf;
 
 	class Pathfinder
 	{
