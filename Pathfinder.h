@@ -1,5 +1,4 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include <iostream>
 
 using namespace sf;
@@ -74,7 +73,6 @@ namespace finder
 		}
 	};
 
-	using namespace sf;
 
 	class Pathfinder
 	{
