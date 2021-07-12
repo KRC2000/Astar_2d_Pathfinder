@@ -15,7 +15,7 @@ int main()
 
 	// Data for pathfinder to use: vector of sf::Uint8(alias for unsigned char) and Vector2i describing map size
 	vector<Uint8> map;
-	Vector2i mSize;// = { 10, 10 };
+	Vector2u mSize;// = { 10, 10 };
 
 	/*
 		Map must contain these symbols

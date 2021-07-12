@@ -79,7 +79,7 @@ namespace finder
 		const std::vector<unsigned char>* map = nullptr;
 		std::vector<Node> nodes;
 		std::vector<Vector2i> pathVec;
-		const Vector2i* mapSize = nullptr;
+		const Vector2u* mapSize = nullptr;
 		Node* startNode = nullptr, * finishNode = nullptr;
 	public:
 		Pathfinder() {};
@@ -92,7 +92,7 @@ namespace finder
 		2 - start position
 		3 - finish position
 		*/
-		void setUp(const std::vector<Uint8>& map, const Vector2i& mapSize)
+		void setUp(const std::vector<Uint8>& map, const Vector2u& mapSize)
 		{
 			this->map = &map;
 			this->mapSize = &mapSize;
@@ -199,6 +199,8 @@ namespace finder
 
 				if (node.mapValue == 2) s.setFillColor(Color::Blue);
 				if (node.mapValue == 3) s.setFillColor(Color::Magenta);
+				Color c = s.getFillColor(); c.a = 150;
+				s.setFillColor(c);
 				target.draw(s);
 			}
 		}
